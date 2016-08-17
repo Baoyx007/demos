@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .magnigier{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 5px solid #000;
+      position: relative;
+    }
+    .magnigier:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 8px;
+      height: 60px;
+      background-color: black;
+      /*margin-left: 30px;*/
+      top:20px;
+      right: -22px;
+      transform: rotate(-45deg);
+    }
+  </style>
+</head>
+<body>
+<div class="magnigier"></div>
+
+</body>
+</html>

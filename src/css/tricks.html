@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      position: relative;
+    }
+    div:hover::after {
+      content: attr(data-title);    //取到data-title属性的值
+    display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      position: absolute;
+      /*top: -50px;*/
+      /*left: -30px;*/
+    }
+  </style>
+</head>
+<body>
+
+<div data-title="hello, world">hello...</div>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    @keyframes ripple {
+      to {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+    .ripple {
+      position: absolute;
+      background: rgba(1,0,0,.15);
+      border-radius: 100%;
+      transform: scale(0);
+      pointer-events: none;
+      animation: ripple .75s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+<script>
+  $('body').on('click', function (e) {
+    var x = e.pageX;
+    var y = e.pageY;
+    var $ripple = $('<span class="ripple"></span>');
+    $ripple.appendTo(this).css({
+      left: x - $ripple.width() / 2,
+      top: y - $ripple.height() / 2
+    });
+  });
+</script>
+</html>
