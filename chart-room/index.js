@@ -19,7 +19,7 @@ http.listen(port, function () {
 });
 
 // Routing
-app.use(express.static(path.join(__dirname, '/src')))
+app.use('/src', express.static(path.join(__dirname, '/src')))
 app.use('/static', express.static(path.join(__dirname, '/node_modules')))
 
 
